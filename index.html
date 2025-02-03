@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS PRACTICE FEH</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css";; rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>;
+
+    <style>
+
+    	body{
+    		background-color: #C8A2C8;
+    	}
+
+    	* {
+    		margin: 0;
+    		padding: 0;
+    		box-sizing: border-box;
+    	}
+
+    	.container{
+    		margin: auto;
+    		width: 50%;
+    		padding: 10px;
+    		text-align:center;
+    	}
+
+
+    </style>
+
+</head>
+<body>
+
+<center>
+
+	<div class="col-md-6 mt-5">
+
+		<details ontoggle="message()" class="text-light">
+			<summary>Instructions</summary>
+			 <i>Enter two numbers then calculate using the following operations.</i>
+		</details>
+
+<br>
+
+<form>
+
+	<label class="text-light">Enter 1st Number:</label> <input type="number" id="num1" class="form-control" placeholder="input here...">
+	<br>
+	<label class="text-light">Enter 2nd Number:</label> <input type="number" id="num2" class="form-control" placeholder="input here...">
+
+	<br>
+
+	<button type="Submit" style="background-color: #E0B0FF;" class="btn text-light" onmouseover="plus()">Add</button>
+	<button type="Submit" style="background-color: #E0B0FF;" class="btn text-light" onmouseover="minus()">Subtract</button>
+	<button type="Submit" style="background-color: #E0B0FF;" class="btn text-light" onmouseover="times()">Multiply</button>
+	<button type="Submit" style="background-color: #E0B0FF;" class="btn text-light" onmouseover="dividedby()">Divide</button>
+
+
+	<a href="index.html"><button style="background-color: #E0B0FF;" class="btn text-light">Refresh</button></a>
+
+	<br><br>
+
+	<span class="form-control"><h1 id="Result">RESULT</h1></span>
+
+</form>
+
+<script>
+
+	function plus(){
+
+		var num1 = document.getElementById("num1").value
+		var num2 = document.getElementById("num2").value
+		var sum = Number(num1) + Number(num2);
+
+		document.getElementById('Result').innerHTML='The Answer Is:' + ' ' + sum;
+	}
+
+	function minus(){
+
+		var num1 = document.getElementById("num1").value
+		var num2 = document.getElementById("num2").value
+		var difference = Number(num1) - Number(num2);
+
+		document.getElementById('Result').innerHTML='The Answer Is:' + ' ' + difference;
+
+	}
+
+	function times(){
+
+		var num1 = document.getElementById("num1").value
+		var num2 = document.getElementById("num2").value
+		var product = Number(num1) * Number(num2);
+
+		document.getElementById('Result').innerHTML='The Answer Is:' + ' ' + product;
+
+	}
+
+	function dividedby(){
+
+		var num1 = document.getElementById("num1").value
+		var num2 = document.getElementById("num2").value
+		var quotient = Number(num1) / Number(num2);
+
+		document.getElementById('Result').innerHTML='The Answer Is:' + ' ' + quotient;
+
+	}
+
+	function message(){
+		alert("Try It!");
+	}
+
+</script>
+
+</div>
+
+</center>
+
+</body>
+</html>
